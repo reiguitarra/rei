@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace tabuleiro
 {
     class Tabuleiro
     {
-        public int linhas { get; set; }
-        public int colunas { get; set; }
+        public int Linhas { get; set; }
+        public int Colunas { get; set; }
         private Peca[,] pecas;
 
-        public Tabuleiro(int linhas, int colunas)
+        public Tabuleiro(int linha, int coluna)
         {
-            this.linhas = linhas;
-            this.colunas = colunas;
-            pecas = new Peca[linhas, colunas];
+            Linhas = linha;
+            Colunas = coluna;
+            pecas = new Peca[Linhas, Colunas];
         }
 
         public Peca peca(int linha, int coluna)
@@ -24,8 +21,8 @@ namespace tabuleiro
 
         public void colocarPeca(Peca p, Posicao pos)
         {
-            pecas[pos.linha, pos.coluna] = p;
-            p.posicao = pos;
+            pecas[pos.Linha, pos.Coluna] = p;
+            p.Posicao = pos;
         }
 
     }

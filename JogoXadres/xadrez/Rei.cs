@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using tabuleiro;
 
-namespace JogoXadres.xadrez
+namespace xadrez
 {
     class Rei : Peca
     {
@@ -11,5 +9,14 @@ namespace JogoXadres.xadrez
         {
 
         }
+
+
+
+        public override string ToString()
+        {
+            return "R";
+        }
+
+
     }
 }
