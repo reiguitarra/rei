@@ -1,7 +1,7 @@
 ﻿using System;
 using tabuleiro;
 
-namespace JogoXadres
+namespace JogoXadrez
 {
     class Tela
     {
@@ -9,6 +9,7 @@ namespace JogoXadres
         {
             for (int i = 0; i < tab.Linhas; i++)
             {
+                Console.Write(8 - i + " "  );
                 for (int j = 0; j < tab.Colunas; j++)
                 {
                     if (tab.Peca(i,j) == null)
@@ -23,6 +24,8 @@ namespace JogoXadres
                 }
                 Console.WriteLine();
             }
+
+            Console.Write("  a b c d e f g h");
         }
     }
 }
