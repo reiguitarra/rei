@@ -18,10 +18,18 @@ namespace JogoXadrez
                     Tela.imrpimirTabuleiro(partida.Tab);
                     
                     
+                    
                     Console.WriteLine();
+
                     Console.Write("Origem: ");
                     Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
 
+                    bool[,] PosPossiveis = partida.Tab.Peca(origem).MovimentosPossiveis();
+
+                    Console.Clear();
+                    Tela.imrpimirTabuleiro(partida.Tab, PosPossiveis);
+
+                    Console.WriteLine();
                     Console.Write("Destino: ");
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 

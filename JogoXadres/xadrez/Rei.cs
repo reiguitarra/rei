@@ -14,7 +14,7 @@ namespace xadrez
         {
             Peca p = Tab.Peca(pos);
 
-            return p == null || p.Cor == Cor;
+            return p == null || p.Cor != Cor;
 
         }
 
