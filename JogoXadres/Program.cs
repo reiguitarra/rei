@@ -16,8 +16,9 @@ namespace JogoXadrez
                 {
                     Console.Clear();
                     Tela.imrpimirTabuleiro(partida.Tab);
+                    Console.WriteLine();
                     
-                    
+
                     
                     Console.WriteLine();
 
@@ -34,6 +35,8 @@ namespace JogoXadrez
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
                     partida.RealizaJogada(origem, destino);
+
+
                 }
                 
 
