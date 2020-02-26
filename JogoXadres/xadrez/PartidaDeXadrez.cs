@@ -51,6 +51,32 @@ namespace xadrez
             }
         }
 
+        public void ValidaPosicaoDeOrigem(Posicao pos)
+        {
+            if (Tab.Peca(pos) == null)
+            {
+                throw new TabuleiroException("Não existe peça na origem escolhida!");
+            }
+
+            if (JogadorAtual != Tab.Peca(pos).Cor)
+            {
+                throw new TabuleiroException("A peça de origem não é sua!");
+            }
+
+            if (!Tab.Peca(pos).ExisteMovimentosPossiveis())
+            {
+                throw new TabuleiroException("Não há movimentos possíveis para a peça de origem escolhida!");
+            }
+        }
+
+        public void ValidaPosicaoDeDestino(Posicao origem, Posicao destino)
+        {
+            if (!Tab.Peca(origem).PodeMoverPara(destino))
+            {
+                throw new TabuleiroException("A posição de Destino é inválida!");
+            }
+        }
+
         private void ColocarPecas()
         {
 
