@@ -27,7 +27,11 @@ namespace JogoXadrez
             ImprimirConjunto(partida.pecasCapturadas(Cor.Branca));
             Console.WriteLine();
             Console.Write("Pretas: ");
+            ConsoleColor aux = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
             ImprimirConjunto(partida.pecasCapturadas(Cor.Preta));
+            Console.ForegroundColor = aux;
+            Console.WriteLine();
         }
 
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
